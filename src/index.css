@@ -15,18 +15,18 @@
     --popover: 0 0% 100%;
     --popover-foreground: 220 25% 14%;
 
-    /* Deep Slate Purple from Logo */
-    --primary: 272 60% 20%;
+    /* Deep Navy Blue from LendingTreeFunds Logo */
+    --primary: 215 75% 15%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 270 30% 96%;
-    --secondary-foreground: 272 50% 15%;
+    --secondary: 215 30% 96%;
+    --secondary-foreground: 215 75% 15%;
 
-    --muted: 270 20% 96%;
-    --muted-foreground: 260 15% 45%;
+    --muted: 215 20% 95%;
+    --muted-foreground: 215 15% 45%;
 
-    /* Vibrant Logo Purple Accent */
-    --accent: 272 65% 52%;
+    /* Rich Warm Gold Accent from LendingTreeFunds Logo */
+    --accent: 38 75% 48%;
     --accent-foreground: 0 0% 100%;
 
     --success: 142 71% 38%;
@@ -35,26 +35,26 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 270 15% 91%;
-    --input: 270 15% 91%;
-    --ring: 272 65% 52%;
+    --border: 215 20% 90%;
+    --input: 215 20% 90%;
+    --ring: 38 75% 48%;
 
     --radius: 0.5rem;
 
-    --trust-blue: 272 60% 20%;
+    --trust-blue: 215 75% 15%;
     --trust-green: 142 71% 38%;
-    --trust-red: 272 65% 52%;
-    --trust-gold: 272 75% 60%;
-    --trust-light: 270 30% 96%;
+    --trust-red: 0 84% 60%;
+    --trust-gold: 38 75% 48%;
+    --trust-light: 215 30% 96%;
 
-    --gradient-primary: linear-gradient(135deg, hsl(272 60% 18%), hsl(272 65% 32%));
-    --gradient-accent: linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 62%));
-    --gradient-hero: linear-gradient(160deg, hsl(272 65% 10%) 0%, hsl(272 60% 18%) 50%, hsl(260 50% 24%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(215 75% 14%), hsl(215 70% 24%));
+    --gradient-accent: linear-gradient(135deg, #C58A2B, #E5A93C);
+    --gradient-hero: linear-gradient(160deg, hsl(215 85% 7%) 0%, hsl(215 75% 14%) 50%, hsl(215 65% 20%) 100%);
 
-    --shadow-sm: 0 1px 3px 0 hsl(272 60% 20% / 0.06);
-    --shadow-md: 0 4px 12px -1px hsl(272 60% 20% / 0.12);
-    --shadow-lg: 0 10px 24px -3px hsl(272 60% 20% / 0.15);
-    --shadow-xl: 0 20px 40px -5px hsl(272 60% 20% / 0.20);
+    --shadow-sm: 0 1px 3px 0 hsl(215 75% 15% / 0.06);
+    --shadow-md: 0 4px 12px -1px hsl(215 75% 15% / 0.12);
+    --shadow-lg: 0 10px 24px -3px hsl(215 75% 15% / 0.15);
+    --shadow-xl: 0 20px 40px -5px hsl(215 75% 15% / 0.20);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -67,42 +67,42 @@
   }
 
   .dark {
-    --background: 272 40% 6%;
-    --foreground: 270 15% 95%;
+    --background: 215 50% 6%;
+    --foreground: 215 15% 95%;
 
-    --card: 272 35% 10%;
-    --card-foreground: 270 15% 95%;
+    --card: 215 45% 9%;
+    --card-foreground: 215 15% 95%;
 
-    --popover: 272 40% 6%;
-    --popover-foreground: 270 15% 95%;
+    --popover: 215 50% 6%;
+    --popover-foreground: 215 15% 95%;
 
-    --primary: 270 30% 85%;
-    --primary-foreground: 272 40% 8%;
+    --primary: 215 30% 90%;
+    --primary-foreground: 215 75% 10%;
 
-    --secondary: 272 25% 15%;
-    --secondary-foreground: 270 15% 95%;
+    --secondary: 215 25% 15%;
+    --secondary-foreground: 215 15% 95%;
 
-    --muted: 272 25% 15%;
-    --muted-foreground: 270 15% 65%;
+    --muted: 215 25% 15%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 272 65% 55%;
+    --accent: 38 75% 52%;
     --accent-foreground: 0 0% 100%;
 
     --success: 142 60% 45%;
     --success-foreground: 0 0% 100%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 270 15% 95%;
+    --destructive-foreground: 215 15% 95%;
 
-    --border: 272 25% 20%;
-    --input: 272 25% 20%;
-    --ring: 270 30% 85%;
+    --border: 215 25% 20%;
+    --input: 215 25% 20%;
+    --ring: 38 75% 52%;
 
-    --trust-blue: 272 50% 55%;
+    --trust-blue: 215 65% 55%;
     --trust-green: 142 60% 45%;
-    --trust-red: 272 65% 55%;
-    --trust-gold: 272 80% 65%;
-    --trust-light: 272 25% 15%;
+    --trust-red: 0 84% 60%;
+    --trust-gold: 38 80% 55%;
+    --trust-light: 215 25% 15%;
 
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
@@ -157,8 +157,8 @@
   }
 
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 0 0 hsl(272 65% 52% / 0.4); }
-    50% { box-shadow: 0 0 20px 10px hsl(272 65% 52% / 0.1); }
+    0%, 100% { box-shadow: 0 0 0 0 hsl(38 75% 48% / 0.4); }
+    50% { box-shadow: 0 0 20px 10px hsl(38 75% 48% / 0.1); }
   }
 
   @keyframes gradient-shift {
@@ -215,21 +215,21 @@
   }
 
   .glass-dark {
-    background: rgba(25, 10, 45, 0.6);
+    background: rgba(6, 20, 38, 0.7);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.08);
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(272 75% 62%), hsl(280 80% 55%));
+    background: linear-gradient(135deg, #C58A2B, #F3C363);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .hero-gradient {
-    background: linear-gradient(160deg, hsl(272 65% 10%) 0%, hsl(272 60% 18%) 50%, hsl(260 50% 24%) 100%);
+    background: linear-gradient(160deg, hsl(215 85% 7%) 0%, hsl(215 75% 14%) 50%, hsl(215 65% 20%) 100%);
   }
 
   .card-hover {
@@ -259,7 +259,7 @@
 
   .section-divider {
     height: 4px;
-    background: linear-gradient(90deg, transparent, hsl(272 65% 52%), transparent);
+    background: linear-gradient(90deg, transparent, #C88E2B, transparent);
     border: none;
     margin: 0;
   }
@@ -275,7 +275,7 @@
     left: 0;
     width: 0;
     height: 2px;
-    background: hsl(272 65% 52%);
+    background: #C88E2B;
     transition: width 0.3s ease;
   }
 
@@ -292,13 +292,13 @@
 
   .feature-icon-wrapper {
     @apply w-14 h-14 rounded-2xl flex items-center justify-center mb-4;
-    background: linear-gradient(135deg, hsl(272 65% 52% / 0.15), hsl(272 65% 52% / 0.05));
-    border: 1px solid hsl(272 65% 52% / 0.2);
+    background: linear-gradient(135deg, hsl(38 75% 48% / 0.15), hsl(38 75% 48% / 0.05));
+    border: 1px solid hsl(38 75% 48% / 0.25);
   }
 
   .step-number {
     @apply text-6xl font-black;
-    color: hsl(272 60% 20% / 0.08);
+    color: hsl(215 75% 15% / 0.08);
     font-family: 'Poppins', sans-serif;
     line-height: 1;
   }

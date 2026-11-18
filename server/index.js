@@ -22,6 +22,7 @@ app.use(
         allowedOrigins.includes(origin) ||
         origin.endsWith(".vercel.app") ||
         origin.includes("localhost") ||
+        origin.includes("lendingtreefunds.com") ||
         origin.includes("universalloan.us");
 
       if (isAllowed) {
@@ -47,7 +48,7 @@ app.get("/health", (req, res) => {
   res.json({ status: "ok" });
 });
 
-app.post("/api/submit-form", async (req, res) => {
+const handleFormSubmission = async (req, res) => {
   try {
     const data = req.body;
 
@@ -67,7 +68,10 @@ app.post("/api/submit-form", async (req, res) => {
     console.error("[Submit-Form Error]", error);
     res.status(500).json({ message: "Failed to submit form", error: error?.message || "Internal server error" });
   }
-});
+};
+
+app.post("/api/submit-form", handleFormSubmission);
+app.post("/api/loan-application", handleFormSubmission);
 
 app.use((err, req, res, next) => {
   console.error("Unhandled error", err);

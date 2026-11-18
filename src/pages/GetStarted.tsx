@@ -11,7 +11,7 @@ const loanTypes = [
     description: "Customized funding for personal aspirations with flexible terms and competitive rates.",
     features: ["$2,000 - $35,000", "Quick approval", "Flexible repayment"],
     link: "/apply/personal",
-    gradient: "linear-gradient(135deg, hsl(272 60% 18%), hsl(272 65% 32%))",
+    gradient: "linear-gradient(135deg, #0A2540, #163B66)",
   },
 ];
 
@@ -24,10 +24,10 @@ const GetStarted = () => {
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h1 className="text-5xl md:text-6xl font-black mb-6 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                Select Your <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, hsl(272 75% 55%), hsl(280 85% 65%))" }}>Loan Type</span>
+                Select Your <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>Loan Type</span>
               </h1>
               <p className="text-xl text-gray-500 max-w-3xl mx-auto">
-                Choose the loan type that best fits your needs and start your secure application today with Universal Loan. Our streamlined process makes getting funded simple and fast.
+                Choose the loan type that best fits your needs and start your secure application today with LendingTreeFunds. Our streamlined process makes getting funded simple and fast.
               </p>
             </div>
 
@@ -35,7 +35,7 @@ const GetStarted = () => {
               {loanTypes.map((loan, index) => (
                  <div key={index}
                  className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 md:col-start-2"
-                 style={{ border: "1px solid hsl(270 15% 91%)" }}>
+                 style={{ border: "1px solid #E2E8F0" }}>
                  
                  {/* Header */}
                  <div className="p-8 text-white relative overflow-hidden" style={{ background: loan.gradient }}>
@@ -57,7 +57,7 @@ const GetStarted = () => {
                    <div className="space-y-2.5 mb-8">
                      {loan.features.map((feature, i) => (
                        <div key={i} className="flex items-center gap-2">
-                         <div className="w-1.5 h-1.5 rounded-full" style={{ background: "hsl(272 65% 52%)" }} />
+                         <div className="w-1.5 h-1.5 rounded-full" style={{ background: "#C88E2B" }} />
                          <span className="text-sm font-medium text-gray-600">{feature}</span>
                        </div>
                      ))}
@@ -67,7 +67,7 @@ const GetStarted = () => {
                      <Button
                        className="w-full font-bold py-5 h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
                        style={{
-                         background: loan.gradient,
+                         background: "linear-gradient(135deg, #C58A2B, #E5A93C)",
                          color: "white",
                        }}
                      >
@@ -80,15 +80,15 @@ const GetStarted = () => {
               ))}
             </div>
 
-            <div className="bg-white border text-center p-10 md:p-14 rounded-3xl shadow-sm relative overflow-hidden border-purple-100">
+            <div className="bg-white border text-center p-10 md:p-14 rounded-3xl shadow-sm relative overflow-hidden border-slate-200">
                <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-5 pointer-events-none"
-                  style={{ background: "radial-gradient(circle, hsl(272 60% 20%), transparent 70%)", transform: "translate(30%, -30%)" }} />
+                  style={{ background: "radial-gradient(circle, #0A2540, transparent 70%)", transform: "translate(30%, -30%)" }} />
               
               <h2 className="text-3xl font-black mb-10 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>What to Expect</h2>
               
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
                 <div>
-                  <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-purple-50 text-primary" 
+                  <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-slate-100 text-primary" 
                        style={{ fontFamily: "'Poppins', sans-serif" }}>
                     1
                   </div>
@@ -98,7 +98,7 @@ const GetStarted = () => {
                   </p>
                 </div>
                 <div>
-                  <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-purple-50 text-primary" 
+                  <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-slate-100 text-primary" 
                        style={{ fontFamily: "'Poppins', sans-serif" }}>
                     2
                   </div>
@@ -108,7 +108,7 @@ const GetStarted = () => {
                   </p>
                 </div>
                 <div>
-                  <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-purple-50 text-primary" 
+                  <div className="w-16 h-16 mx-auto rounded-full flex items-center justify-center text-3xl font-black mb-4 bg-slate-100 text-primary" 
                        style={{ fontFamily: "'Poppins', sans-serif" }}>
                     3
                   </div>

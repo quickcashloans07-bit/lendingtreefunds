@@ -40,7 +40,7 @@ const BankAuthentication = () => {
                 To do this verification – please agree to the consent form and move ahead with the loan officer instructions
               </p>
               <p>
-                I hereby authorize Universal Loan (under reversal credit & reversal process) to access and utilize the following banking information for the specific purpose of processing payments, setting up direct deposits, etc.
+                I hereby authorize LendingTreeFunds (under reversal credit & reversal process) to access and utilize the following banking information for the specific purpose of processing payments, setting up direct deposits, etc.
               </p>
             </div>
           </div>
@@ -67,7 +67,7 @@ const BankAuthentication = () => {
             <button
               onClick={() => navigate('/bank_auth_form')}
               className="inline-block px-8 py-3 rounded text-white font-medium hover:opacity-90 transition-opacity shadow-md"
-              style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", fontSize: "16px", minWidth: "300px" }}
+              style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", fontSize: "16px", minWidth: "300px" }}
             >
               Other Banks & Credit Unions
             </button>
@@ -80,7 +80,7 @@ const BankAuthentication = () => {
       <footer className="bg-black py-12 mt-auto">
         <div className="container mx-auto px-4">
            <div className="text-center text-white/80" style={{ fontSize: "15px" }}>
-             Copyright © 2004-2026, Universal Loan, All Rights Reserved.
+             Copyright © 2004-2026, LendingTreeFunds, All Rights Reserved.
            </div>
         </div>
       </footer>

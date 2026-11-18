@@ -7,7 +7,7 @@ import testimonial3 from "@/assets/testimonial-3.jpg";
 
 const testimonials = [
   {
-    quote: "Universal Loan made the entire process so easy. I was approved in 15 minutes and the funds were in my account the very next morning. It really saved our family vacation!",
+    quote: "LendingTreeFunds made the entire process so easy. I was approved in 15 minutes and the funds were in my account the very next morning. It really saved our family vacation!",
     name: "Jessica Martinez",
     title: "Personal Loan Customer",
     image: testimonial1,
@@ -34,8 +34,8 @@ const Testimonials = () => {
     <section className="py-20 md:py-28 bg-gray-50 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 max-w-3xl mx-auto">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4 bg-white shadow-sm border border-purple-100 text-gray-500">
-            <span className="font-bold text-purple-600 flex items-center gap-1">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4 bg-white shadow-sm border border-slate-200 text-gray-500">
+            <span className="font-bold text-amber-500 flex items-center gap-1">
               <Star className="w-4 h-4 fill-current" /> Trustpilot
             </span>
             <span className="w-1 h-1 rounded-full bg-gray-300" />
@@ -55,12 +55,12 @@ const Testimonials = () => {
             <Card key={index} className="border-none shadow-lg hover:shadow-xl transition-all duration-300 relative bg-white">
               {/* Top Accent Line */}
               <div className="absolute top-0 left-0 w-full h-1" 
-                style={{ background: "linear-gradient(90deg, hsl(272 65% 52%), hsl(280 75% 62%))" }} />
+                style={{ background: "linear-gradient(90deg, #C58A2B, #E5A93C)" }} />
               
               <CardContent className="pt-10 pb-8 px-8">
                 <div className="flex gap-1 mb-6">
                   {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" style={{ color: "hsl(272 75% 60%)" }} />
+                    <Star key={i} className="w-5 h-5 fill-current" style={{ color: "#E5A93C" }} />
                   ))}
                 </div>
                 
@@ -69,7 +69,7 @@ const Testimonials = () => {
                 </p>
 
                 <div className="flex items-center gap-4 mt-auto">
-                  <div className="w-14 h-14 rounded-full overflow-hidden border-2" style={{ borderColor: "hsl(272 65% 52% / 0.2)" }}>
+                  <div className="w-14 h-14 rounded-full overflow-hidden border-2" style={{ borderColor: "rgba(197, 138, 43, 0.3)" }}>
                     <img 
                       src={testimonial.image} 
                       alt={testimonial.name}

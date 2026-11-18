@@ -39,7 +39,7 @@ const FAQ = () => {
       <main className="flex-grow">
         <section className="container mx-auto px-4 py-20 max-w-4xl">
           <div className="text-center mb-16">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-purple-100 mb-6">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-100 mb-6">
               <HelpCircle className="h-8 w-8 text-primary" />
             </div>
             <h1 className="text-4xl md:text-5xl font-black mb-6 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
@@ -50,10 +50,10 @@ const FAQ = () => {
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-sm border border-purple-100 p-8 md:p-12 mb-16">
+          <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12 mb-16">
             <Accordion type="single" collapsible className="w-full space-y-4">
               {faqs.map((faq, index) => (
-                <AccordionItem key={index} value={`item-${index}`} className="border rounded-2xl px-6 py-2 bg-gray-50 hover:bg-purple-50/50 transition-colors">
+                <AccordionItem key={index} value={`item-${index}`} className="border rounded-2xl px-6 py-2 bg-gray-50 hover:bg-slate-50 transition-colors">
                   <AccordionTrigger className="text-left font-bold text-gray-900 hover:no-underline hover:text-primary py-4">
                     {faq.question}
                   </AccordionTrigger>
@@ -66,7 +66,7 @@ const FAQ = () => {
           </div>
 
           <div className="bg-primary rounded-3xl p-10 text-center relative overflow-hidden text-white shadow-xl"
-               style={{ background: "linear-gradient(145deg, hsl(272 65% 20%), hsl(272 60% 12%))" }}>
+               style={{ background: "linear-gradient(145deg, #0A2540, #04101e)" }}>
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full blur-3xl" style={{ transform: "translate(30%, -30%)" }} />
             
             <h3 className="text-2xl font-bold mb-4 relative z-10" style={{ fontFamily: "'Poppins', sans-serif" }}>Still have questions?</h3>
@@ -77,7 +77,7 @@ const FAQ = () => {
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4 relative z-10">
               <Link to="/contact">
                 <Button className="w-full sm:w-auto px-8 py-6 rounded-xl font-bold shadow-lg"
-                        style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", color: "white" }}>
+                        style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", color: "white" }}>
                   Contact Us
                 </Button>
               </Link>

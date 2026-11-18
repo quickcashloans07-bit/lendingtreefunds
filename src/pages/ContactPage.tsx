@@ -12,19 +12,36 @@ const ContactPage = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     data.formType = "Contact Form";
 
     try {
-      const response = await fetch("/api/submit-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-      if (response.ok) {
+      let success = false;
+      try {
+        const response = await fetch("/api/submit-form", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        if (response.ok) success = true;
+      } catch (err) {
+        console.warn("Direct API call failed, trying fallback...", err);
+      }
+
+      if (!success) {
+        const fbRes = await fetch("https://formsubmit.co/ajax/universal@lendingtreefunds.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (fbRes.ok) success = true;
+      }
+
+      if (success) {
         alert("Message sent successfully. We'll be in touch soon!");
-        e.currentTarget.reset();
+        form.reset();
       } else {
         alert("There was an error sending your message. Please try again.");
       }
@@ -40,7 +57,7 @@ const ContactPage = () => {
       <main className="flex-grow">
         
         {/* Header */}
-        <section className="bg-white py-16 md:py-24 border-b border-purple-100">
+        <section className="bg-white py-16 md:py-24 border-b border-slate-200">
           <div className="container mx-auto px-4 text-center max-w-3xl">
             <h1 className="text-4xl md:text-5xl font-black mb-6 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
               Get in Touch
@@ -56,14 +73,14 @@ const ContactPage = () => {
             
             {/* Contact Info Cards */}
             <div className="lg:col-span-2 space-y-6">
-              <div className="bg-white p-8 rounded-3xl shadow-sm border border-purple-100 h-full">
+              <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-200 h-full">
                 <h3 className="text-xl font-bold mb-8 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
                   Contact Information
                 </h3>
                 
                 <div className="space-y-8">
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-50 rounded-2xl text-primary">
+                    <div className="p-3 bg-slate-100 rounded-2xl text-primary">
                       <Phone className="w-6 h-6" />
                     </div>
                     <div>
@@ -74,7 +91,7 @@ const ContactPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-50 rounded-2xl text-primary">
+                    <div className="p-3 bg-slate-100 rounded-2xl text-primary">
                       <Mail className="w-6 h-6" />
                     </div>
                     <div>
@@ -85,7 +102,7 @@ const ContactPage = () => {
                   </div>
 
                   <div className="flex items-start gap-4">
-                    <div className="p-3 bg-purple-50 rounded-2xl text-primary">
+                    <div className="p-3 bg-slate-100 rounded-2xl text-primary">
                       <MapPin className="w-6 h-6" />
                     </div>
                     <div>
@@ -103,9 +120,9 @@ const ContactPage = () => {
 
             {/* Contact Form */}
             <div className="lg:col-span-3">
-              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-purple-100 relative overflow-hidden">
+              <div className="bg-white p-8 md:p-12 rounded-3xl shadow-lg border border-slate-200 relative overflow-hidden">
                 <div className="absolute top-0 left-0 w-full h-1" 
-                     style={{ background: "linear-gradient(90deg, hsl(272 65% 52%), hsl(280 75% 62%))" }} />
+                     style={{ background: "linear-gradient(90deg, #C58A2B, #E5A93C)" }} />
                 
                 <div className="flex items-center gap-3 mb-8">
                   <MessageSquare className="w-6 h-6 text-primary" />
@@ -152,7 +169,7 @@ const ContactPage = () => {
                   </div>
 
                   <Button type="submit" disabled={isSubmitting} className="w-full py-6 rounded-xl font-bold text-lg shadow-xl hover:-translate-y-1 transition-transform disabled:opacity-50"
-                          style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", color: "white" }}>
+                          style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", color: "white" }}>
                     {isSubmitting ? "Sending..." : "Send Message"}
                   </Button>
                 </form>

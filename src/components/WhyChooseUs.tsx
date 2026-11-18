@@ -29,9 +29,9 @@ const WhyChooseUs = () => {
     <section className="py-20 md:py-28 relative overflow-hidden bg-white">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-5 pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(272 60% 20%), transparent 70%)", transform: "translate(30%, -30%)" }} />
+        style={{ background: "radial-gradient(circle, #0A2540, transparent 70%)", transform: "translate(30%, -30%)" }} />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-[0.03] pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(272 65% 52%), transparent 70%)", transform: "translate(-20%, 30%)" }} />
+        style={{ background: "radial-gradient(circle, #C88E2B, transparent 70%)", transform: "translate(-20%, 30%)" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -39,16 +39,16 @@ const WhyChooseUs = () => {
           {/* Left Column */}
           <div className="animate-fade-in-left">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6"
-              style={{ background: "hsl(272 60% 20% / 0.05)", color: "hsl(272 60% 20%)", border: "1px solid hsl(272 60% 20% / 0.1)" }}>
-              <Medal className="w-4 h-4" />
+              style={{ background: "hsl(215 75% 15% / 0.05)", color: "hsl(215 75% 15%)", border: "1px solid hsl(215 75% 15% / 0.1)" }}>
+              <Medal className="w-4 h-4 text-amber-600" />
               Over 15 Years of Excellence
             </div>
             
             <h2 className="text-4xl md:text-5xl font-black text-primary mb-6 leading-tight"
               style={{ fontFamily: "'Poppins', sans-serif" }}>
               Why Choose <br />
-              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, hsl(272 75% 55%), hsl(280 85% 65%))" }}>
-                Universal Loan
+              <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>
+                LendingTreeFunds
               </span>
             </h2>
             
@@ -83,8 +83,8 @@ const WhyChooseUs = () => {
                   boxShadow: "0 10px 40px -10px rgba(0,0,0,0.05)",
                 }}>
                 <div className="w-14 h-14 rounded-2xl flex items-center justify-center mb-6"
-                  style={{ background: "linear-gradient(135deg, hsl(270 30% 96%), white)", border: "1px solid hsl(270 15% 91%)", boxShadow: "0 4px 10px rgba(0,0,0,0.03)" }}>
-                  <reason.icon className="w-6 h-6" style={{ color: "hsl(272 65% 52%)" }} />
+                  style={{ background: "linear-gradient(135deg, #FFF9ED, white)", border: "1px solid #F3E3C3", boxShadow: "0 4px 10px rgba(0,0,0,0.03)" }}>
+                  <reason.icon className="w-6 h-6" style={{ color: "#C88E2B" }} />
                 </div>
                 <h3 className="text-xl font-bold text-primary mb-3">{reason.title}</h3>
                 <p className="text-sm text-gray-500 leading-relaxed">{reason.description}</p>

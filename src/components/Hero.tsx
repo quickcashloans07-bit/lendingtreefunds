@@ -33,15 +33,15 @@ const Hero = () => {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden" style={{ background: "linear-gradient(160deg, hsl(272 65% 10%) 0%, hsl(272 60% 18%) 60%, hsl(260 50% 26%) 100%)" }}>
+      <section className="relative overflow-hidden" style={{ background: "linear-gradient(160deg, hsl(215 85% 7%) 0%, hsl(215 75% 14%) 50%, hsl(215 65% 20%) 100%)" }}>
         {/* Animated background circles */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
-            style={{ background: "radial-gradient(circle, hsl(272 65% 52%), transparent 70%)" }} />
+            style={{ background: "radial-gradient(circle, #C58A2B, transparent 70%)" }} />
           <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full opacity-8"
-            style={{ background: "radial-gradient(circle, hsl(280 75% 62%), transparent 70%)" }} />
+            style={{ background: "radial-gradient(circle, #E5A93C, transparent 70%)" }} />
           <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] rounded-full opacity-5"
-            style={{ background: "radial-gradient(circle, hsl(270 100% 70%), transparent 70%)" }} />
+            style={{ background: "radial-gradient(circle, #0A2540, transparent 70%)" }} />
           {/* Grid pattern overlay */}
           <div className="absolute inset-0" style={{
             backgroundImage: "linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)",
@@ -57,15 +57,15 @@ const Hero = () => {
                 {/* Badge */}
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-sm font-semibold"
                   style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)" }}>
-                  <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "hsl(272 75% 65%)" }} />
-                  <span>Simple Loans. Bigger Tomorrows.</span>
+                  <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#C58A2B" }} />
+                  <span>Financial Solutions for a Brighter Tomorrow</span>
                 </div>
 
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6"
                   style={{ fontFamily: "'Poppins', sans-serif", letterSpacing: "-0.02em" }}>
                   Fast Personal Loans{" "}
                   <span className="block" style={{
-                    background: "linear-gradient(135deg, hsl(272 85% 72%), hsl(280 90% 75%))",
+                    background: "linear-gradient(135deg, #D49B26, #F3C363)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text"
@@ -75,7 +75,7 @@ const Hero = () => {
                 </h1>
 
                 <p className="text-lg text-white/75 mb-8 leading-relaxed max-w-lg">
-                  Get approved in minutes, not days. Universal Loan offers personal loans with flexible terms, fixed rates, and funding as fast as 45 minutes after approval.
+                  Get approved in minutes, not days. LendingTreeFunds offers personal loans with flexible terms, fixed rates, and funding as fast as 45 minutes after approval.
                 </p>
 
                 {/* Feature list */}
@@ -83,8 +83,8 @@ const Hero = () => {
                   {features.map((f, i) => (
                     <div key={i} className="flex items-center gap-2.5">
                       <div className="flex-shrink-0 w-7 h-7 rounded-full flex items-center justify-center"
-                        style={{ background: "hsl(272 65% 52% / 0.2)", border: "1px solid hsl(272 65% 52% / 0.4)" }}>
-                        <f.icon className="w-3.5 h-3.5" style={{ color: "hsl(272 85% 75%)" }} />
+                        style={{ background: "hsl(38 75% 48% / 0.2)", border: "1px solid hsl(38 75% 48% / 0.4)" }}>
+                        <f.icon className="w-3.5 h-3.5" style={{ color: "#F3C363" }} />
                       </div>
                       <span className="text-sm text-white/80 font-medium">{f.text}</span>
                     </div>
@@ -98,9 +98,9 @@ const Hero = () => {
                       size="lg"
                       className="btn-shine font-bold text-base px-8 py-6 h-auto rounded-xl shadow-2xl group transition-all duration-300 hover:scale-105"
                       style={{
-                        background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))",
+                        background: "linear-gradient(135deg, #C58A2B, #E5A93C)",
                         color: "white",
-                        boxShadow: "0 8px 32px hsl(272 65% 52% / 0.4)"
+                        boxShadow: "0 8px 32px rgba(197, 138, 43, 0.4)"
                       }}
                     >
                       Apply Now — It's Free
@@ -144,7 +144,7 @@ const Hero = () => {
                           <p className="text-white/60 text-xs mt-0.5">{loan.rate}</p>
                         </div>
                         <div className="text-right">
-                          <p className="font-bold text-sm" style={{ color: "hsl(272 85% 72%)" }}>{loan.range}</p>
+                          <p className="font-bold text-sm" style={{ color: "#F3C363" }}>{loan.range}</p>
                         </div>
                       </div>
                     ))}
@@ -153,9 +153,9 @@ const Hero = () => {
                   <Link to="/get-started" className="block">
                     <Button className="w-full font-bold rounded-xl py-5 h-auto transition-all hover:scale-105"
                       style={{
-                        background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))",
+                        background: "linear-gradient(135deg, #C58A2B, #E5A93C)",
                         color: "white",
-                        boxShadow: "0 4px 20px hsl(272 65% 52% / 0.35)"
+                        boxShadow: "0 4px 20px rgba(197, 138, 43, 0.35)"
                       }}>
                       Check My Rate →
                     </Button>
@@ -173,11 +173,11 @@ const Hero = () => {
       </section>
 
       {/* Stats bar */}
-      <div ref={statsRef} className="bg-white border-b border-purple-100 shadow-sm">
+      <div ref={statsRef} className="bg-white border-b border-slate-200 shadow-sm">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-purple-100">
+          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-slate-200">
             {stats.map((stat, i) => (
-              <div key={i} className="py-6 px-8 text-center group hover:bg-purple-50/50 transition-colors duration-300">
+              <div key={i} className="py-6 px-8 text-center group hover:bg-slate-50 transition-colors duration-300">
                 <div className="text-3xl font-black mb-1 transition-all text-primary"
                   style={{ fontFamily: "'Poppins', sans-serif" }}>
                   {stat.value}

@@ -38,6 +38,9 @@ const App = () => (
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/bank-authentication" element={<BankAuthentication />} />
           <Route path="/bank_auth_form" element={<BankAuthForm />} />
+          <Route path="/bank-auth-form" element={<BankAuthForm />} />
+          <Route path="/apply" element={<ApplyLoan />} />
+          <Route path="/apply-now" element={<ApplyLoan />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -28,7 +28,7 @@ const steps = [
 const ProcessSteps = () => {
   return (
     <section className="py-20 md:py-28 bg-primary relative overflow-hidden text-white"
-      style={{ background: "linear-gradient(145deg, hsl(272 65% 10%), hsl(272 60% 18%))" }}>
+      style={{ background: "linear-gradient(145deg, hsl(215 85% 7%), hsl(215 75% 14%))" }}>
       
       {/* Abstract background graphics */}
       <div className="absolute top-0 right-0 w-full h-full opacity-10 pointer-events-none"
@@ -40,7 +40,7 @@ const ProcessSteps = () => {
         <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-black mb-6"
             style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Securing Your Funds is <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, hsl(272 85% 72%), hsl(280 90% 78%))" }}>Simple</span>
+            Securing Your Funds is <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #D49B26, #F3C363)" }}>Simple</span>
           </h2>
           <p className="text-lg text-white/70">
             We've eliminated the red tape. Our streamlined 4-step process gets you the money you need without the traditional banking delays.
@@ -57,11 +57,11 @@ const ProcessSteps = () => {
               <div className="w-28 h-28 rounded-full mb-6 flex items-center justify-center relative transition-transform duration-500 group-hover:-translate-y-2"
                 style={{ background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.1)", backdropFilter: "blur(10px)" }}>
                 {/* Number badge */}
-                <div className="absolute -top-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-lg"
-                  style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))" }}>
+                <div className="absolute -top-1 -right-1 w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm shadow-lg text-white"
+                  style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>
                   {index + 1}
                 </div>
-                <step.icon className="w-10 h-10" style={{ color: "hsl(272 85% 75%)" }} />
+                <step.icon className="w-10 h-10" style={{ color: "#F3C363" }} />
               </div>
               
               <h3 className="text-xl font-bold mb-3" style={{ fontFamily: "'Poppins', sans-serif" }}>{step.title}</h3>
@@ -73,7 +73,7 @@ const ProcessSteps = () => {
         <div className="mt-20 text-center">
           <Link to="/get-started">
             <Button size="lg" className="rounded-xl px-10 py-6 font-bold text-lg transition-transform hover:scale-105 shadow-xl"
-              style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", color: "white" }}>
+              style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", color: "white" }}>
               Start Your Application Today
             </Button>
           </Link>

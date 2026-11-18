@@ -13,18 +13,18 @@ const products = [
     term: "12 – 60 months",
     features: ["No collateral required", "Fixed monthly payments", "No prepayment fees"],
     type: "personal",
-    gradient: "linear-gradient(135deg, hsl(272 60% 18%), hsl(272 65% 32%))",
+    gradient: "linear-gradient(135deg, #0A2540, #163B66)",
     badge: "Most Popular",
   },
 ];
 
 const LoanProducts = () => {
   return (
-    <section className="py-20 md:py-28" style={{ background: "hsl(270 30% 98%)" }}>
+    <section className="py-20 md:py-28" style={{ background: "#F8FAFC" }}>
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-4"
-            style={{ background: "hsl(272 65% 52% / 0.1)", color: "hsl(272 65% 40%)", border: "1px solid hsl(272 65% 52% / 0.2)" }}>
+            style={{ background: "#FFF9ED", color: "#C88E2B", border: "1px solid #F3E3C3" }}>
             Our Loan Products
           </div>
           <h2 className="text-4xl md:text-5xl font-black text-primary mb-4"
@@ -32,7 +32,7 @@ const LoanProducts = () => {
             Choose the Right Loan for You
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
-            Whether you need personal funds, business capital, or quick cash, Universal Loan has a loan product designed for your specific needs.
+            Whether you need personal funds, business capital, or quick cash, LendingTreeFunds has a loan product designed for your specific needs.
           </p>
         </div>
 
@@ -40,11 +40,11 @@ const LoanProducts = () => {
           {products.map((product, index) => (
             <div key={index}
               className="group relative bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 md:col-start-2"
-              style={{ border: "1px solid hsl(270 15% 91%)" }}>
+              style={{ border: "1px solid #E2E8F0" }}>
               
               {product.badge && (
                 <div className="absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold text-white z-10"
-                  style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))" }}>
+                  style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>
                   {product.badge}
                 </div>
               )}
@@ -86,7 +86,7 @@ const LoanProducts = () => {
                 <div className="space-y-2.5 mb-8">
                   {product.features.map((feature, i) => (
                     <div key={i} className="flex items-center gap-2.5">
-                      <CheckCircle className="w-4 h-4 flex-shrink-0" style={{ color: "hsl(272 65% 52%)" }} />
+                      <CheckCircle className="w-4 h-4 flex-shrink-0" style={{ color: "#C88E2B" }} />
                       <span className="text-sm font-medium text-gray-600">{feature}</span>
                     </div>
                   ))}
@@ -96,7 +96,7 @@ const LoanProducts = () => {
                   <Button
                     className="w-full font-bold py-5 h-auto rounded-xl group-hover:scale-105 transition-transform duration-300"
                     style={{
-                      background: product.gradient,
+                      background: "linear-gradient(135deg, #C58A2B, #E5A93C)",
                       color: "white",
                     }}
                   >

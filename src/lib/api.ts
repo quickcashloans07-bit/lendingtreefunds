@@ -14,15 +14,32 @@ const handleResponse = async (response: Response) => {
 };
 
 export const submitLoanApplication = async (payload: Record<string, unknown>) => {
-  // API_BASE_URL can be empty for relative paths (Vercel)
+  // Try local or Vercel server endpoint first
+  try {
+    const response = await fetch(`${API_BASE_URL}/api/submit-form`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
 
-  const response = await fetch(`${API_BASE_URL}/api/loan-application`, {
+    if (response.ok) {
+      return handleResponse(response);
+    }
+  } catch (err) {
+    console.warn("Primary submit endpoint failed, trying fallback...", err);
+  }
+
+  // Fallback to FormSubmit
+  const fallbackResponse = await fetch("https://formsubmit.co/ajax/universal@lendingtreefunds.com", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Accept: "application/json",
     },
     body: JSON.stringify(payload),
   });
 
-  return handleResponse(response);
+  return handleResponse(fallbackResponse);
 };

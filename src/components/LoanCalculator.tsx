@@ -23,19 +23,19 @@ const LoanCalculator = () => {
   return (
     <section className="py-20 md:py-28 bg-white relative overflow-hidden">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full opacity-5 pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(272 60% 20%), transparent 70%)", transform: "translate(30%, -30%)" }} />
+        style={{ background: "radial-gradient(circle, #0A2540, transparent 70%)", transform: "translate(30%, -30%)" }} />
       <div className="absolute bottom-0 left-0 w-[600px] h-[600px] rounded-full opacity-[0.03] pointer-events-none"
-        style={{ background: "radial-gradient(circle, hsl(272 65% 52%), transparent 70%)", transform: "translate(-20%, 30%)" }} />
+        style={{ background: "radial-gradient(circle, #C88E2B, transparent 70%)", transform: "translate(-20%, 30%)" }} />
 
       <div className="max-w-5xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full mb-6 text-sm font-semibold"
-            style={{ background: "hsl(272 60% 20% / 0.05)", color: "hsl(272 60% 20%)", border: "1px solid hsl(272 60% 20% / 0.1)" }}>
-            <Calculator className="w-4 h-4" />
+            style={{ background: "hsl(215 75% 15% / 0.05)", color: "hsl(215 75% 15%)", border: "1px solid hsl(215 75% 15% / 0.1)" }}>
+            <Calculator className="w-4 h-4 text-amber-600" />
             <span className="uppercase tracking-wide">Interactive Tool</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-black mb-4 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
-            Estimate Your <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, hsl(272 75% 55%), hsl(280 85% 65%))" }}>Payments</span>
+            Estimate Your <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>Payments</span>
           </h2>
           <p className="text-lg text-gray-500 max-w-2xl mx-auto">
             Use our calculator to get an idea of what your monthly payments might look like before applying. No impact on your credit score.
@@ -121,7 +121,7 @@ const LoanCalculator = () => {
 
             {/* Right side: Results */}
             <div className="lg:col-span-2 p-8 md:p-12 text-white relative flex flex-col"
-                 style={{ background: "linear-gradient(145deg, hsl(272 65% 18%), hsl(272 60% 12%))" }}>
+                 style={{ background: "linear-gradient(145deg, #0A2540, #04101e)" }}>
                
               <div className="absolute inset-0 opacity-10"
                    style={{ backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)", backgroundSize: "20px 20px" }} />
@@ -131,7 +131,7 @@ const LoanCalculator = () => {
                 
                 <div className="space-y-8">
                   <div className="p-6 rounded-2xl relative overflow-hidden" 
-                       style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", boxShadow: "0 10px 30px rgba(0,0,0,0.2)" }}>
+                       style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", boxShadow: "0 10px 30px rgba(197, 138, 43, 0.3)" }}>
                     <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full" style={{ transform: "translate(30%, -30%)" }} />
                     <span className="block text-white/80 font-medium mb-1">Estimated Monthly Payment</span>
                     <span className="block text-4xl font-black text-white" style={{ fontFamily: "'Poppins', sans-serif" }}>

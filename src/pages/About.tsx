@@ -9,26 +9,26 @@ const About = () => {
       <main className="flex-grow">
         
         {/* Hero Section */}
-        <section className="relative overflow-hidden pt-20 pb-32" style={{ background: "hsl(272 65% 10%)" }}>
+        <section className="relative overflow-hidden pt-20 pb-32" style={{ background: "hsl(215 85% 7%)" }}>
           {/* Background pattern */}
           <div className="absolute inset-0 opacity-10 pointer-events-none"
                style={{ backgroundImage: "radial-gradient(circle at 20% 50%, white, transparent 50%)" }} />
           
           <div className="container mx-auto px-4 relative z-10 text-center">
             <h1 className="text-5xl md:text-7xl font-black text-white mb-6" style={{ fontFamily: "'Poppins', sans-serif" }}>
-              About <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, hsl(272 75% 65%), hsl(280 85% 75%))" }}>Universal Loan</span>
+              About <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>LendingTreeFunds</span>
             </h1>
             <p className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed">
               We're redefining the lending experience with speed, security, and transparency.
-              Our mission is to empower individuals and businesses with simple loans for bigger tomorrows.
+              Our mission is to empower individuals and businesses with financial solutions for a brighter tomorrow.
             </p>
           </div>
         </section>
 
         {/* Floating Stats */}
         <section className="container mx-auto px-4 -mt-20 relative z-20 mb-20">
-          <div className="bg-white rounded-3xl shadow-xl border border-purple-100 p-8 md:p-12">
-            <div className="grid md:grid-cols-4 gap-8 divide-x-0 md:divide-x divide-purple-100">
+          <div className="bg-white rounded-3xl shadow-xl border border-slate-200 p-8 md:p-12">
+            <div className="grid md:grid-cols-4 gap-8 divide-x-0 md:divide-x divide-slate-200">
               <div className="text-center md:text-left px-4">
                 <p className="text-4xl font-black mb-2 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>15+</p>
                 <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider">Years Experience</p>
@@ -61,9 +61,9 @@ const About = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-purple-100 hover:shadow-xl transition-shadow text-center">
+            <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 hover:shadow-xl transition-shadow text-center">
               <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6"
-                   style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", color: "white" }}>
+                   style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", color: "white" }}>
                 <Target className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900" style={{ fontFamily: "'Poppins', sans-serif" }}>Transparency</h3>
@@ -72,9 +72,9 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-purple-100 hover:shadow-xl transition-shadow text-center">
+            <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 hover:shadow-xl transition-shadow text-center">
               <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6"
-                   style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", color: "white" }}>
+                   style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", color: "white" }}>
                 <Users className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900" style={{ fontFamily: "'Poppins', sans-serif" }}>Customer First</h3>
@@ -83,9 +83,9 @@ const About = () => {
               </p>
             </div>
             
-            <div className="bg-white p-10 rounded-3xl shadow-sm border border-purple-100 hover:shadow-xl transition-shadow text-center">
+            <div className="bg-white p-10 rounded-3xl shadow-sm border border-slate-200 hover:shadow-xl transition-shadow text-center">
               <div className="w-16 h-16 mx-auto rounded-2xl flex items-center justify-center mb-6"
-                   style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", color: "white" }}>
+                   style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", color: "white" }}>
                 <Award className="w-8 h-8" />
               </div>
               <h3 className="text-2xl font-bold mb-4 text-gray-900" style={{ fontFamily: "'Poppins', sans-serif" }}>Security</h3>
@@ -97,13 +97,13 @@ const About = () => {
         </section>
 
         {/* Process Detail Section */}
-        <section className="bg-white py-24 border-t border-purple-100">
+        <section className="bg-white py-24 border-t border-slate-200">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               
               <div>
                 <h2 className="text-4xl font-black mb-6 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
-                  Expertise <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, hsl(272 75% 55%), hsl(280 85% 65%))" }}>Made Simple</span>
+                  Expertise <span className="text-transparent bg-clip-text" style={{ backgroundImage: "linear-gradient(135deg, #C58A2B, #E5A93C)" }}>Made Simple</span>
                 </h2>
                 <p className="text-lg text-gray-500 mb-8 leading-relaxed">
                   We've removed the friction from traditional borrowing. Our platform combines cutting-edge fintech with deep financial expertise to deliver a seamless experience.
@@ -111,7 +111,7 @@ const About = () => {
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-purple-50 p-2 rounded-lg text-primary">
+                    <div className="mt-1 bg-slate-100 p-2 rounded-lg text-primary">
                       <FileText className="w-6 h-6" />
                     </div>
                     <div>
@@ -121,7 +121,7 @@ const About = () => {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-purple-50 p-2 rounded-lg text-primary">
+                    <div className="mt-1 bg-slate-100 p-2 rounded-lg text-primary">
                       <CreditCard className="w-6 h-6" />
                     </div>
                     <div>
@@ -131,7 +131,7 @@ const About = () => {
                   </div>
                   
                   <div className="flex items-start gap-4">
-                    <div className="mt-1 bg-purple-50 p-2 rounded-lg text-primary">
+                    <div className="mt-1 bg-slate-100 p-2 rounded-lg text-primary">
                       <CheckCircle className="w-6 h-6" />
                     </div>
                     <div>
@@ -142,18 +142,18 @@ const About = () => {
                 </div>
               </div>
 
-              <div className="bg-gray-50 rounded-3xl p-10 border border-purple-100 relative">
-                 <div className="absolute top-0 right-0 w-32 h-32 rounded-bl-full" style={{ background: "linear-gradient(135deg, hsl(272 65% 52%), hsl(280 75% 58%))", opacity: 0.1 }}></div>
+              <div className="bg-gray-50 rounded-3xl p-10 border border-slate-200 relative">
+                 <div className="absolute top-0 right-0 w-32 h-32 rounded-bl-full" style={{ background: "linear-gradient(135deg, #C58A2B, #E5A93C)", opacity: 0.1 }}></div>
                  
                  <h3 className="text-2xl font-bold mb-8 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>Comprehensive Support</h3>
                  
                  <div className="space-y-6">
-                    <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-purple-100">
+                    <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
                       <MousePointer className="w-6 h-6 text-primary" />
                       <span className="font-medium text-gray-700">Online Support 24/7</span>
                     </div>
                     
-                    <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-purple-100">
+                    <div className="flex items-center gap-4 bg-white p-4 rounded-2xl shadow-sm border border-slate-200">
                       <Scale className="w-6 h-6 text-primary" />
                       <span className="font-medium text-gray-700">Fair Lending Practices</span>
                     </div>
@@ -165,14 +165,14 @@ const About = () => {
         </section>
 
         {/* Team Section */}
-        <section className="bg-gray-50 py-24 border-t border-purple-100">
+        <section className="bg-gray-50 py-24 border-t border-slate-200">
           <div className="container mx-auto px-4 max-w-6xl">
             <div className="text-center mb-16 max-w-3xl mx-auto">
               <h2 className="text-4xl font-black mb-6 text-primary" style={{ fontFamily: "'Poppins', sans-serif" }}>
                 Meet Our Team
               </h2>
               <p className="text-lg text-gray-500">
-                The dedicated professionals behind Universal Loan working to secure your financial future.
+                The dedicated professionals behind LendingTreeFunds working to secure your financial future.
               </p>
             </div>
             
@@ -183,7 +183,7 @@ const About = () => {
                 { name: "Jennifer Ross", role: "Documents Manager - Activation", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=400&q=80" },
                 { name: "Catherine Dorsen", role: "Verification Team - Accounts", image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=400&q=80" }
               ].map((member, i) => (
-                <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-purple-100 group hover:-translate-y-2 transition-transform duration-300">
+                <div key={i} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-200 group hover:-translate-y-2 transition-transform duration-300">
                   <div className="aspect-[4/5] overflow-hidden">
                     <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                   </div>
